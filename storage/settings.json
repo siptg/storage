@@ -1,0 +1,43 @@
+{
+  "logfile": "storage.log",
+  "debug_level": 2,
+  "terminate_delay": 60,
+  "host": "localhost",
+  "port": 23456,
+  "tdlib": {
+    "api_id": API_ID,
+    "api_hash": API_HASH,
+    "path": "sessions"
+  },
+  "allowed_updates": [
+    "updateNewMessage",
+    "updateCall"
+  ],
+  "allowed_requests": [
+    "setAuthenticationPhoneNumber",
+    "checkAuthenticationCode",
+    "recoverAuthenticationPassword",
+    "requestAuthenticationPasswordRecovery",
+    "logOut",
+    "getUser",
+    "createCall",
+    "discardCall",
+    "receiveCall",
+    "acceptCall",
+    "getInlineQueryResults",
+    "sendInlineQueryResultMessage",
+    "deleteMessages"
+  ],
+  "request_peers": {
+    "sendMessage": "chat_id",
+    "getInlineQueryResults": ["bot_user_id", "chat_id"],
+    "sendInlineQueryResultMessage": "chat_id",
+    "createCall": "user_id",
+    "getUser": "user_id"
+  },
+  "format_fields": {
+    "inputMessageText": "text",
+    "inputMessageDocument": "caption",
+    "inputInlineQueryResultArticle": "input_message_content"
+  }
+}
