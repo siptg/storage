@@ -40,7 +40,7 @@ After that set the host's `address:port` in the bot and push `Turn on` button. Y
 | 50002* 	| TCP  	| all   	| Storage external       	| nginx/nginx.conf: `stream`→`server`→`listen`                                      	|
 | 23456  	| TCP  	| local 	| Storage internal       	| storage/settings.json: `port`<br>nginx/nginx.conf: `stream`→`server`→`proxy_pass` 	|
 
-\* -- the port which you have to provide to the bot.
+\* — the port which you have to provide to the bot.
 
 ## Managing the storage
 ### Restart
@@ -58,6 +58,7 @@ docker-compose pull storage && docker-compose up -d storage
 
 ## Settings file
 Settings file is located on `storage/settings.json` and has JSON format with the following options:
+
 | Option                	| Description                                                                                                                                                                                                                                                                                                                                                                                                                                                        	|  Default  	|
 |-----------------------	|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|:---------:	|
 | logfile               	| If set, redirect stderr and stdout to the specified file. Please note: it requires to attach [external volume](https://docs.docker.com/compose/compose-file/#volumes) from the `docker-compose.yml`, make an empty file with the given logfile name and [update](#update) the storage first.                                                                                                                                                                       	| (not set) 	|
@@ -100,6 +101,7 @@ Settings file is located on `storage/settings.json` and has JSON format with the
 
 ## Update and request types used by SIP.tg platform
 Depending on the features you want to use, the list of allowed update and RPC request types can include one or multiple groups from the table:
+
 | Feature                                                        | allowed_updates                                                                                        | allowed_requests                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 |----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Managing the session from [@siptg_bot](https://t.me/siptg_bot) |                                                                                                        | [setAuthenticationPhoneNumber](https://core.telegram.org/tdlib/docs/classtd_1_1td__api_1_1set_authentication_phone_number.html), [checkAuthenticationCode](https://core.telegram.org/tdlib/docs/classtd_1_1td__api_1_1check_authentication_code.html), [recoverAuthenticationPassword](https://core.telegram.org/tdlib/docs/classtd_1_1td__api_1_1recover_authentication_password.html), [requestAuthenticationPasswordRecovery](https://core.telegram.org/tdlib/docs/classtd_1_1td__api_1_1request_authentication_password_recovery.html), [logOut](https://core.telegram.org/tdlib/docs/classtd_1_1td__api_1_1log_out.html) |
