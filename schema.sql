@@ -1,11 +1,9 @@
 -- Create syntax for TABLE 'tg_auth_keys'
 CREATE TABLE `tg_auth_keys` (
-  `id` bigint(20) unsigned NOT NULL,
+  `tg_session_id` bigint(20) unsigned NOT NULL,
   `dc_id` tinyint(2) unsigned NOT NULL,
   `auth_key` mediumblob NOT NULL,
-  `tg_session_id` bigint(20) unsigned NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `tg_session_id` (`tg_session_id`),
+  PRIMARY KEY (`tg_session_id`,`dc_id`),
   CONSTRAINT `tg_auth_keys_ibfk_1` FOREIGN KEY (`tg_session_id`) REFERENCES `tg_sessions` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
