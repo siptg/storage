@@ -6,7 +6,7 @@
   "port": 23456,
   "tdlib": {
     "api_id": API_ID,
-    "api_hash": API_HASH,
+    "api_hash": "API_HASH",
     "path": "sessions"
   },
   "allowed_updates": [
