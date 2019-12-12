@@ -25,6 +25,9 @@ Get `API_ID` and `API_HASH` through [API development tools](https://my.telegram.
 
 Get the `cert.pem` and `key.pem` from the [@siptg_bot](https://t.me/siptg_bot) and push it to `ssl` directory inside `storage`.
 
+> **Warning!** The certificate which is given from the bot is valid for a limited time (365 days at the moment). In the case it expires, you get **Certificate error** while connecting to the storage and have to get the new one the same way. To check the expiration date use the following command:  
+`openssl x509 -enddate -noout -in ssl/cert.pem`
+
 Next, verify and change if needed the storage's server port which will be used to connect to your storage from SIP.tg platform (see [below](#default-ports-which-are-used-by-the-storage)). If you are is under the NAT, verify the port mapping at the NAT as well. Also don't forget to allow incoming connections for the specified port at your firewall if needed.
 
 Next, run the storage by command:
