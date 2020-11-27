@@ -28,6 +28,7 @@
     "discardCall",
     "receiveCall",
     "acceptCall",
+    "restoreCall",
     "getInlineQueryResults",
     "sendInlineQueryResultMessage",
     "deleteMessages",
