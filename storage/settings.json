@@ -23,6 +23,7 @@
     "recoverAuthenticationPassword",
     "requestAuthenticationPasswordRecovery",
     "logOut",
+    "getMe",
     "getUser",
     "createCall",
     "discardCall",
