@@ -45,7 +45,10 @@
     "editMessageReplyMarkup",
     "answerInlineQuery",
     "editInlineMessageText",
-    "editInlineMessageReplyMarkup"
+    "editInlineMessageReplyMarkup",
+    "getActiveSessions",
+    "toggleSessionCanAcceptCalls",
+    "setUserPrivacySettingRules"
   ],
   "request_peers": {
     "sendMessage": "chat_id",
