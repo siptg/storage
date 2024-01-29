@@ -32,7 +32,7 @@ Next, verify and change if needed the storage's server port which will be used t
 
 Next, run the storage by command:
 ```
-docker-compose up -d storage nginx
+docker-compose up -d
 ```
 
 After that set the host's `address:port` in the bot and push `Turn on` button. You're done!
@@ -49,14 +49,14 @@ After that set the host's `address:port` in the bot and push `Turn on` button. Y
 ### Restart
 Inside `storage` directory run:
 ```
-docker-compose restart storage
+docker-compose restart
 ```
 
 ### Update
 Inside `storage` directory run:
 ```
 git pull
-docker-compose pull storage && docker-compose up -d storage
+docker-compose pull && docker-compose up -d
 ```
 
 ## Settings file
